@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="MY Tema Traffic Light"/>
+    <LinearLayout
+        android:layout_width="150dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/lightBg"
+        android:layout_height="350dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/red"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="100dp"
+            android:src="@drawable/red"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/yellow"
+            android:layout_gravity="center"
+            android:layout_marginBottom="1dp"
+            android:layout_height="100dp"
+            android:src="@drawable/yellow"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/green"
+            android:layout_gravity="center"
+            android:layout_height="100dp"
+            android:src="@drawable/green"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:background="@color/lightBg"
+        android:layout_height="160dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/red_bt"
+            android:background="@color/red"
+            android:layout_marginRight="10dp"
+            android:layout_margin="10dp"
+            android:onClick="red"
+            android:layout_height="wrap_content"
+            android:text="Red"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/yellow_bt"
+            android:background="@color/yellow"
+            android:layout_toRightOf="@+id/red_bt"
+            android:onClick="yellow"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="yellow"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/green_bt"
+            android:layout_toRightOf="@id/yellow_bt"
+            android:onClick="green"
+            android:background="@color/green"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="green"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/off_bt"
+            android:layout_below="@id/yellow_bt"
+            android:onClick="off"
+            android:layout_toRightOf="@id/red_bt"
+            android:background="@color/off"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="off"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
